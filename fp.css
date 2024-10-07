@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
 }
 
 .container {
@@ -15,10 +15,11 @@ body {
 }
 
 header {
-    background-color: #007acc;
-    color: white;
+    background-color: #1e1e1e; /* Darker header */
+    color: #00bcd4; /* Bright cyan color for header text */
     padding: 20px 0;
     text-align: center;
+    border-bottom: 2px solid #00bcd4; /* Highlight border */
 }
 
 header h1 {
@@ -26,21 +27,23 @@ header h1 {
 }
 
 h2 {
-    color: #007acc;
+    color: #00bcd4; /* Bright cyan color for section titles */
+    border-bottom: 1px solid #00bcd4; /* Underline for section titles */
+    padding-bottom: 5px; /* Padding for spacing */
 }
 
 .about, .vision, .what-we-do, .get-involved {
-    background: white;
+    background: #1e1e1e; /* Darker background for sections */
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Soft white shadow */
 }
 
 blockquote {
     font-style: italic;
-    color: #555;
-    border-left: 4px solid #007acc;
+    color: #b0bec5; /* Lighter gray for quotes */
+    border-left: 4px solid #00bcd4; /* Highlight border for quotes */
     padding-left: 20px;
     margin: 10px 0;
 }
@@ -52,6 +55,7 @@ footer {
 
 footer p {
     font-weight: bold;
+    color: #00bcd4; /* Bright cyan color for footer text */
 }
 
 ul {
@@ -64,10 +68,10 @@ ul li {
 }
 
 a {
-    color: #007acc;
+    color: #00bcd4; /* Bright cyan color for links */
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover for better visibility */
 }
