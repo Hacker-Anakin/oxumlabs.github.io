@@ -13,47 +13,51 @@
     </header>
 
     <div class="container">
-        <section class="about">
+        <!-- Floating Panel: About Us -->
+        <section class="floating-panel about">
             <h2>About Us</h2>
-            <p>At Oxum Labs, we aim to push the boundaries of programming with innovative tools that don’t just solve problems—they inspire creativity! We believe that code is art, and we are the artists, painting the future of software development. Welcome to the lab where imagination meets reality.</p>
+            <p>At Oxum Labs, we push the boundaries of programming with tools that don't just solve problems—they inspire creativity! We believe code is art, and we are the artists, painting the future of software development. Welcome to our lab where imagination meets reality.</p>
             <blockquote>“Programming is like riding a bike. Except the bike is on fire, you’re on fire, everything is on fire, and you’re in hell.”</blockquote>
         </section>
 
-        <section class="vision">
+        <!-- Floating Panel: Our Vision -->
+        <section class="floating-panel vision">
             <h2>🌟 Our Vision</h2>
-            <p>“We envision a world where technology is open, accessible, and fun. At Oxum Labs, we are creating Neit and other exciting tools to empower developers around the globe. We’re in the business of making the impossible a reality—so get on board!”</p>
+            <p>“We envision a world where technology is open, accessible, and fun. At Oxum Labs, we're creating Neit and other exciting tools to empower developers globally. We’re in the business of making the impossible a reality—so hop on board!”</p>
         </section>
 
-        <section class="what-we-do">
+        <!-- Floating Panel: What We Do -->
+        <section class="floating-panel what-we-do">
             <h2>What We Do</h2>
             <ul>
-                <li><strong>🚀 Cutting-Edge Solutions:</strong> Building Neit, a language to simplify your world of code.</li>
+                <li><strong>🚀 Cutting-Edge Solutions:</strong> Building Neit, a language that simplifies your world of code.</li>
                 <li><strong>🎯 Developer-First:</strong> We listen, we build, we refine—because developers know best!</li>
-                <li><strong>🔓 Open and Free:</strong> We believe the best tools are the ones everyone can access, without a paywall in sight.</li>
+                <li><strong>🔓 Open and Free:</strong> Our tools are free and open to everyone.</li>
             </ul>
             <blockquote>“The best way to predict the future is to invent it.” – Alan Kay</blockquote>
         </section>
 
-        <section class="get-involved">
+        <!-- Floating Panel: Get Involved -->
+        <section class="floating-panel get-involved">
             <h2>Get Involved</h2>
-            <p>We love feedback! If you have thoughts, suggestions, or just want to say hello, don’t hesitate to reach out. Oxum Labs is more than a company—it’s a community. Let’s build something amazing together.</p>
+            <p>If you have suggestions, feedback, or want to say hello, don’t hesitate to reach out. Oxum Labs is more than a company—it’s a community. Let’s build something amazing together.</p>
             <ul>
                 <li>Email: <a href="mailto:oxumlabs@proton.me">oxumlabs@proton.me</a></li>
             </ul>
             <blockquote>“You can't just give up. Is that what a dinosaur would do? No!” – Bennett Foddy</blockquote>
         </section>
 
+        <!-- Repository Cards Section with Scrolling Swap -->
         <section class="repositories">
             <h2>Our Repositories</h2>
-            <div id="repo-slider" class="repo-slider-container">
-                <button class="slider-btn prev">←</button>
+            <p class="scroll-hint">Scroll to swap through our amazing projects! 🖱️</p>
+            <div class="repo-cards-container">
                 <div id="repo-list" class="repo-list">Loading repositories...</div>
-                <button class="slider-btn next">→</button>
             </div>
         </section>
 
         <footer>
-            <p>Thank you for joining us in shaping the future of programming! 🌍 Keep coding, stay creative, and always push the boundaries!</p>
+            <p>Thank you for joining us on our journey to shape the future of programming! 🌍 Keep coding, stay creative, and always push the boundaries!</p>
             <p>“Programming isn’t about what you know; it’s about what you can figure out.” – Chris Pine</p>
         </footer>
     </div>
@@ -67,42 +71,20 @@
                 repoList.innerHTML = ''; // Clear loading message
 
                 data.forEach(repo => {
-                    const repoItem = document.createElement('div');
-                    repoItem.className = 'repo-item';
-                    repoItem.innerHTML = `
+                    const repoCard = document.createElement('div');
+                    repoCard.className = 'repo-card';
+                    repoCard.innerHTML = `
                         <h3>${repo.name}</h3>
                         <p>${repo.description || 'No description available.'}</p>
                         <a href="${repo.html_url}" target="_blank">View Repository</a>
                     `;
-                    repoList.appendChild(repoItem);
+                    repoList.appendChild(repoCard);
                 });
             })
             .catch(error => {
                 console.error('Error fetching repositories:', error);
                 document.getElementById('repo-list').innerHTML = 'Failed to load repositories.';
             });
-
-        // Simple horizontal slider for repositories
-        const repoSlider = document.querySelector('.repo-list');
-        let scrollAmount = 0;
-        const btnPrev = document.querySelector('.prev');
-        const btnNext = document.querySelector('.next');
-
-        btnNext.addEventListener('click', () => {
-            repoSlider.scrollTo({
-                top: 0,
-                left: (scrollAmount += 300),
-                behavior: 'smooth'
-            });
-        });
-
-        btnPrev.addEventListener('click', () => {
-            repoSlider.scrollTo({
-                top: 0,
-                left: (scrollAmount -= 300),
-                behavior: 'smooth'
-            });
-        });
     </script>
 </body>
 </html>
