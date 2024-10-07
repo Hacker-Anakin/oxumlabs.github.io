@@ -15,11 +15,11 @@ body {
 }
 
 header {
-    background-color: #1e1e1e; /* Darker header */
-    color: #00bcd4; /* Bright cyan color for header text */
+    background-color: #1a1a1a; /* Darker header */
+    color: #76ff03; /* Bright green for header text */
     padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #00bcd4; /* Highlight border */
+    border-bottom: 2px solid #76ff03; /* Neon green border */
 }
 
 header h1 {
@@ -32,10 +32,10 @@ header p {
 }
 
 h2 {
-    color: #00bcd4; /* Bright cyan color for section titles */
-    border-bottom: 1px solid #00bcd4; /* Underline for section titles */
-    padding-bottom: 5px; /* Padding for spacing */
-    margin-top: 30px; /* Space above section titles */
+    color: #76ff03; /* Neon green color for section titles */
+    border-bottom: 1px solid #76ff03; /* Underline for section titles */
+    padding-bottom: 5px;
+    margin-top: 30px;
 }
 
 .about, .vision, .what-we-do, .get-involved, .repositories {
@@ -43,43 +43,27 @@ h2 {
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Soft white shadow */
+    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.1); /* Soft green shadow */
 }
 
 blockquote {
     font-style: italic;
     color: #b0bec5; /* Lighter gray for quotes */
-    border-left: 4px solid #00bcd4; /* Highlight border for quotes */
+    border-left: 4px solid #76ff03; /* Neon green border for quotes */
     padding-left: 20px;
     margin: 10px 0;
-    font-size: 1.1rem; /* Slightly larger font for blockquotes */
-}
-
-.repo-list {
-    margin-top: 15px;
-}
-
-.repo-item {
-    background: #2e2e2e; /* Darker background for repository items */
-    border-radius: 6px;
-    padding: 15px;
-    margin: 10px 0;
-    transition: background 0.3s;
-}
-
-.repo-item:hover {
-    background: #3b3b3b; /* Lighter on hover */
+    font-size: 1.1rem;
 }
 
 footer {
     text-align: center;
     margin-top: 40px;
-    font-size: 1.1rem; /* Font size for footer */
+    font-size: 1.1rem;
+    color: #76ff03; /* Neon green for footer text */
 }
 
 footer p {
     font-weight: bold;
-    color: #00bcd4; /* Bright cyan color for footer text */
 }
 
 ul {
@@ -92,10 +76,55 @@ ul li {
 }
 
 a {
-    color: #00bcd4; /* Bright cyan color for links */
+    color: #76ff03; /* Neon green for links */
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover for better visibility */
+    text-decoration: underline;
+}
+
+/* Horizontal Repo Slider */
+.repo-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.repo-list {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.repo-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.repo-item {
+    background: #333; /* Darker background for repo items */
+    padding: 15px;
+    min-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.1); /* Subtle green shadow */
+    transition: transform 0.2s ease-in-out;
+}
+
+.repo-item:hover {
+    transform: scale(1.05);
+}
+
+.slider-btn {
+    background-color: #76ff03; /* Neon green button */
+    color: #121212;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.slider-btn:hover {
+    background-color: #64dd17; /* Slightly darker neon green */
 }

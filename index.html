@@ -9,34 +9,34 @@
 <body>
     <header>
         <h1>Oxum Labs</h1>
-        <p>🚀 Innovating for the Future of Programming</p>
+        <p>🌌 Pioneering the Future of Programming, One Byte at a Time!</p>
     </header>
 
     <div class="container">
         <section class="about">
             <h2>About Us</h2>
-            <p>At Oxum Labs, we are dedicated to innovating and providing solutions that empower the programming community. Our mission is to create high-quality, accessible tools and resources that meet the needs and desires of developers everywhere.</p>
+            <p>At Oxum Labs, we aim to push the boundaries of programming with innovative tools that don’t just solve problems—they inspire creativity! We believe that code is art, and we are the artists, painting the future of software development. Welcome to the lab where imagination meets reality.</p>
             <blockquote>“Programming is like riding a bike. Except the bike is on fire, you’re on fire, everything is on fire, and you’re in hell.”</blockquote>
         </section>
 
         <section class="vision">
             <h2>🌟 Our Vision</h2>
-            <p>“At Oxum Labs, we believe that the future of technology is shaped by open minds and accessible solutions. By creating Neit and focusing on community-driven development, we strive to make powerful tools free, available, and easy to use for everyone.”</p>
+            <p>“We envision a world where technology is open, accessible, and fun. At Oxum Labs, we are creating Neit and other exciting tools to empower developers around the globe. We’re in the business of making the impossible a reality—so get on board!”</p>
         </section>
 
         <section class="what-we-do">
             <h2>What We Do</h2>
             <ul>
-                <li><strong>Innovative Solutions:</strong> Developing the Neit programming language and other projects that drive technological advancement.</li>
-                <li><strong>Community Focused:</strong> Listening to the needs of the developer community and integrating feedback to improve our tools.</li>
-                <li><strong>Open Access:</strong> Ensuring that our tools and solutions are freely available and easy to use.</li>
+                <li><strong>🚀 Cutting-Edge Solutions:</strong> Building Neit, a language to simplify your world of code.</li>
+                <li><strong>🎯 Developer-First:</strong> We listen, we build, we refine—because developers know best!</li>
+                <li><strong>🔓 Open and Free:</strong> We believe the best tools are the ones everyone can access, without a paywall in sight.</li>
             </ul>
             <blockquote>“The best way to predict the future is to invent it.” – Alan Kay</blockquote>
         </section>
 
         <section class="get-involved">
             <h2>Get Involved</h2>
-            <p>We welcome contributions, feedback, and collaboration! If you have suggestions or want to get involved, please reach out to us:</p>
+            <p>We love feedback! If you have thoughts, suggestions, or just want to say hello, don’t hesitate to reach out. Oxum Labs is more than a company—it’s a community. Let’s build something amazing together.</p>
             <ul>
                 <li>Email: <a href="mailto:oxumlabs@proton.me">oxumlabs@proton.me</a></li>
             </ul>
@@ -45,11 +45,15 @@
 
         <section class="repositories">
             <h2>Our Repositories</h2>
-            <div id="repo-list" class="repo-list">Loading repositories...</div>
+            <div id="repo-slider" class="repo-slider-container">
+                <button class="slider-btn prev">←</button>
+                <div id="repo-list" class="repo-list">Loading repositories...</div>
+                <button class="slider-btn next">→</button>
+            </div>
         </section>
 
         <footer>
-            <p>Thank you for being a part of our journey to shape the future of programming! 🌍</p>
+            <p>Thank you for joining us in shaping the future of programming! 🌍 Keep coding, stay creative, and always push the boundaries!</p>
             <p>“Programming isn’t about what you know; it’s about what you can figure out.” – Chris Pine</p>
         </footer>
     </div>
@@ -77,6 +81,28 @@
                 console.error('Error fetching repositories:', error);
                 document.getElementById('repo-list').innerHTML = 'Failed to load repositories.';
             });
+
+        // Simple horizontal slider for repositories
+        const repoSlider = document.querySelector('.repo-list');
+        let scrollAmount = 0;
+        const btnPrev = document.querySelector('.prev');
+        const btnNext = document.querySelector('.next');
+
+        btnNext.addEventListener('click', () => {
+            repoSlider.scrollTo({
+                top: 0,
+                left: (scrollAmount += 300),
+                behavior: 'smooth'
+            });
+        });
+
+        btnPrev.addEventListener('click', () => {
+            repoSlider.scrollTo({
+                top: 0,
+                left: (scrollAmount -= 300),
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
