@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Oxum Labs</title>
-    <link rel="stylesheet" href="fp.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -43,10 +43,40 @@
             <blockquote>“You can't just give up. Is that what a dinosaur would do? No!” – Bennett Foddy</blockquote>
         </section>
 
+        <section class="repositories">
+            <h2>Our Repositories</h2>
+            <div id="repo-list" class="repo-list">Loading repositories...</div>
+        </section>
+
         <footer>
             <p>Thank you for being a part of our journey to shape the future of programming! 🌍</p>
             <p>“Programming isn’t about what you know; it’s about what you can figure out.” – Chris Pine</p>
         </footer>
     </div>
+
+    <script>
+        // Fetch GitHub repositories dynamically
+        fetch('https://api.github.com/users/OxumLabs/repos')
+            .then(response => response.json())
+            .then(data => {
+                const repoList = document.getElementById('repo-list');
+                repoList.innerHTML = ''; // Clear loading message
+
+                data.forEach(repo => {
+                    const repoItem = document.createElement('div');
+                    repoItem.className = 'repo-item';
+                    repoItem.innerHTML = `
+                        <h3>${repo.name}</h3>
+                        <p>${repo.description || 'No description available.'}</p>
+                        <a href="${repo.html_url}" target="_blank">View Repository</a>
+                    `;
+                    repoList.appendChild(repoItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching repositories:', error);
+                document.getElementById('repo-list').innerHTML = 'Failed to load repositories.';
+            });
+    </script>
 </body>
 </html>

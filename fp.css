@@ -38,7 +38,7 @@ h2 {
     margin-top: 30px; /* Space above section titles */
 }
 
-.about, .vision, .what-we-do, .get-involved {
+.about, .vision, .what-we-do, .get-involved, .repositories {
     background: #1e1e1e; /* Darker background for sections */
     padding: 20px;
     margin: 20px 0;
@@ -53,6 +53,22 @@ blockquote {
     padding-left: 20px;
     margin: 10px 0;
     font-size: 1.1rem; /* Slightly larger font for blockquotes */
+}
+
+.repo-list {
+    margin-top: 15px;
+}
+
+.repo-item {
+    background: #2e2e2e; /* Darker background for repository items */
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: background 0.3s;
+}
+
+.repo-item:hover {
+    background: #3b3b3b; /* Lighter on hover */
 }
 
 footer {
@@ -83,4 +99,3 @@ a {
 a:hover {
     text-decoration: underline; /* Underline on hover for better visibility */
 }
-
