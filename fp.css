@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -24,12 +24,18 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 2.5rem; /* Larger font for header */
+}
+
+header p {
+    font-size: 1.2rem; /* Slightly larger font for subtitle */
 }
 
 h2 {
     color: #00bcd4; /* Bright cyan color for section titles */
     border-bottom: 1px solid #00bcd4; /* Underline for section titles */
     padding-bottom: 5px; /* Padding for spacing */
+    margin-top: 30px; /* Space above section titles */
 }
 
 .about, .vision, .what-we-do, .get-involved {
@@ -46,11 +52,13 @@ blockquote {
     border-left: 4px solid #00bcd4; /* Highlight border for quotes */
     padding-left: 20px;
     margin: 10px 0;
+    font-size: 1.1rem; /* Slightly larger font for blockquotes */
 }
 
 footer {
     text-align: center;
     margin-top: 40px;
+    font-size: 1.1rem; /* Font size for footer */
 }
 
 footer p {
@@ -75,3 +83,4 @@ a {
 a:hover {
     text-decoration: underline; /* Underline on hover for better visibility */
 }
+
