@@ -3,88 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Oxum Labs</title>
-    <link rel="stylesheet" href="fp.css">
+    <title>OxumLabs</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>Oxum Labs</h1>
-        <p>🌌 Pioneering the Future of Programming, One Byte at a Time!</p>
-    </header>
-
-    <div class="container">
-        <!-- Floating Panel: About Us -->
-        <section class="floating-panel about">
-            <h2>About Us</h2>
-            <p>At Oxum Labs, we push the boundaries of programming with tools that don't just solve problems—they inspire creativity! We believe code is art, and we are the artists, painting the future of software development. Welcome to our lab where imagination meets reality.</p>
-            <blockquote>“Programming is like riding a bike. Except the bike is on fire, you’re on fire, everything is on fire, and you’re in hell.”</blockquote>
-        </section>
-
-        <!-- Floating Panel: Our Vision -->
-        <section class="floating-panel vision">
-            <h2>🌟 Our Vision</h2>
-            <p>“We envision a world where technology is open, accessible, and fun. At Oxum Labs, we're creating Neit and other exciting tools to empower developers globally. We’re in the business of making the impossible a reality—so hop on board!”</p>
-        </section>
-
-        <!-- Floating Panel: What We Do -->
-        <section class="floating-panel what-we-do">
-            <h2>What We Do</h2>
-            <ul>
-                <li><strong>🚀 Cutting-Edge Solutions:</strong> Building Neit, a language that simplifies your world of code.</li>
-                <li><strong>🎯 Developer-First:</strong> We listen, we build, we refine—because developers know best!</li>
-                <li><strong>🔓 Open and Free:</strong> Our tools are free and open to everyone.</li>
-            </ul>
-            <blockquote>“The best way to predict the future is to invent it.” – Alan Kay</blockquote>
-        </section>
-
-        <!-- Floating Panel: Get Involved -->
-        <section class="floating-panel get-involved">
-            <h2>Get Involved</h2>
-            <p>If you have suggestions, feedback, or want to say hello, don’t hesitate to reach out. Oxum Labs is more than a company—it’s a community. Let’s build something amazing together.</p>
-            <ul>
-                <li>Email: <a href="mailto:oxumlabs@proton.me">oxumlabs@proton.me</a></li>
-            </ul>
-            <blockquote>“You can't just give up. Is that what a dinosaur would do? No!” – Bennett Foddy</blockquote>
-        </section>
-
-        <!-- Repository Cards Section with Scrolling Swap -->
-        <section class="repositories">
-            <h2>Our Repositories</h2>
-            <p class="scroll-hint">Scroll to swap through our amazing projects! 🖱️</p>
-            <div class="repo-cards-container">
-                <div id="repo-list" class="repo-list">Loading repositories...</div>
-            </div>
-        </section>
-
-        <footer>
-            <p>Thank you for joining us on our journey to shape the future of programming! 🌍 Keep coding, stay creative, and always push the boundaries!</p>
-            <p>“Programming isn’t about what you know; it’s about what you can figure out.” – Chris Pine</p>
-        </footer>
-    </div>
-
-    <script>
-        // Fetch GitHub repositories dynamically
-        fetch('https://api.github.com/users/OxumLabs/repos')
-            .then(response => response.json())
-            .then(data => {
-                const repoList = document.getElementById('repo-list');
-                repoList.innerHTML = ''; // Clear loading message
-
-                data.forEach(repo => {
-                    const repoCard = document.createElement('div');
-                    repoCard.className = 'repo-card';
-                    repoCard.innerHTML = `
-                        <h3>${repo.name}</h3>
-                        <p>${repo.description || 'No description available.'}</p>
-                        <a href="${repo.html_url}" target="_blank">View Repository</a>
-                    `;
-                    repoList.appendChild(repoCard);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching repositories:', error);
-                document.getElementById('repo-list').innerHTML = 'Failed to load repositories.';
-            });
-    </script>
+    <h1 class="topclass">OxumLabs</h1>
+    <p class="description">
+        <strong>Welcome to OxumLabs, where innovation meets inspiration!</strong><br>
+        At OxumLabs, we proudly present the revolutionary Native Execution and Instruction Text (Neit) programming language, alongside our groundbreaking Virtual Execution Node (Ven) Intermediate Representation (IR) Language. Our mission? To unlock a universe of possibilities within the realm of programming languages! But that’s just the beginning—our passionate team of visionaries is tirelessly brainstorming and nurturing brilliant ideas for our vibrant community.
+        <br><br>
+        Here, we don’t just dream of the future; we actively bring it to life! Join us on this exhilarating journey as we transform visionary concepts into reality, empowering you with the tools needed to shape your own destiny.
+    </p>
+    <p class="description">
+        <strong>The Native Execution and Instruction Text (Neit) Programming Language</strong><br>
+        Neit is not just another programming language; it's a revolutionary approach to coding! Experience the simplicity and elegance of coding in a language that rivals the ease of Python, all while minimizing overhead. Imagine crafting code in a syntax that feels natural and intuitive—one that allows you to focus on your creativity rather than getting bogged down in complex syntax.<br>
+        <br>
+        Want to code in your own unique syntax or even in plain English? Neit has your back! With its user-friendly design, Neit empowers you to bring your innovative ideas to life with minimal effort. Are you ready to embark on your coding adventure? Discover more about Neit <a href="https://OxumLabs.github.io/nsite">here!</a>
+    </p>
+    <p class="description">
+        <strong>Virtual Execution Node Intermediate Language (VenIR)</strong><br>
+        Introducing Ven ,an innovative compiler infrastructure designed to empower you to create your own compilers! Ven stands out by producing exceptionally fast and lightweight binaries for the three major platforms: MacOS, Linux, and Windows. What sets Ven apart is its intelligent conversion of IR code into tokens, followed by extremely aggressive code elimination techniques—not limited to just dead code. Ven's primary goal is to strip down code as much as possible, ensuring that only the essential elements remain. This meticulous process results in minimal and highly efficient binaries that perform at peak speed, enhancing your development experience.<br>
+        you can read more you Ven at its git repo <a href="https://github.com/oxumlabs/ven">here!</a>
+        Ven is open source under the <strong>Ven License</strong> and you can read more about it on its repo
+    </p>
+    <p class="description">
+        <strong>Jock</strong><br>
+        Jock is a file encryption software <strong>NOT DESIGNED FOR PROFESSIONAL USE (YET)</strong> using whch , you can easily encrypt you files
+        with a password and recover them and when done using , you can lock them back up! jock is available for windows and linux and can be built from 
+        source for macOS! find jock repo <a href="https://github.com/skubed0007/jock">here</a>
+    </p>
+    <p class="credits">
+        Oxumlabs was co-founded by Jaytirth Kundan (<a href="https://github.com/skubed0007">Find on Git Here</a>) and Bilal KanjelKheir (<a href="https://github.com/bilal-algorithms">Find on Git Here</a>)
+        with amazing team members like <Strong>Buj</Strong> (<a href="https://github.com/5GameMaker">Git Repo Here!</a>) and <Strong>Eliekheil</Strong> (<a href="https://github.com/eliekh05/">Git Repo Here!</a>)
+    </p>
 </body>
 </html>
