@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OxumLabs</title>
-    <link rel="stylesheet" href="index.css">
+    <!-- Initial link to white (light mode) stylesheet -->
+    <link id="theme-stylesheet" rel="stylesheet" href="dark.css">
 </head>
 <body>
+    <!-- Toggle Button for Light/Dark Mode -->
+    <button id="toggle-theme" onclick="toggleTheme()" style="
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        padding: 0.5em 1em;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    ">Switch to Dark Mode</button>
+
     <h1 class="topclass">OxumLabs</h1>
     <p class="description">
         <strong>Welcome to OxumLabs, where innovation meets inspiration!</strong><br>
@@ -22,19 +39,49 @@
     </p>
     <p class="description">
         <strong>Virtual Execution Node Intermediate Language (VenIR)</strong><br>
-        Introducing Ven ,an innovative compiler infrastructure designed to empower you to create your own compilers! Ven stands out by producing exceptionally fast and lightweight binaries for the three major platforms: MacOS, Linux, and Windows. What sets Ven apart is its intelligent conversion of IR code into tokens, followed by extremely aggressive code elimination techniques—not limited to just dead code. Ven's primary goal is to strip down code as much as possible, ensuring that only the essential elements remain. This meticulous process results in minimal and highly efficient binaries that perform at peak speed, enhancing your development experience.<br>
-        you can read more you Ven at its git repo <a href="https://github.com/oxumlabs/ven">here!</a>
-        Ven is open source under the <strong>Ven License</strong> and you can read more about it on its repo
+        Introducing Ven, an innovative compiler infrastructure designed to empower you to create your own compilers! Ven stands out by producing exceptionally fast and lightweight binaries for the three major platforms: MacOS, Linux, and Windows. What sets Ven apart is its intelligent conversion of IR code into tokens, followed by extremely aggressive code elimination techniques—not limited to just dead code. Ven's primary goal is to strip down code as much as possible, ensuring that only the essential elements remain. This meticulous process results in minimal and highly efficient binaries that perform at peak speed, enhancing your development experience.<br>
+        You can read more about Ven on its GitHub repo <a href="https://github.com/oxumlabs/ven">here!</a>.
     </p>
     <p class="description">
         <strong>Jock</strong><br>
-        Jock is a file encryption software <strong>NOT DESIGNED FOR PROFESSIONAL USE (YET)</strong> using whch , you can easily encrypt you files
-        with a password and recover them and when done using , you can lock them back up! jock is available for windows and linux and can be built from 
-        source for macOS! find jock repo <a href="https://github.com/skubed0007/jock">here</a>
+        Jock is a file encryption software <strong>NOT DESIGNED FOR PROFESSIONAL USE (YET)</strong> using which, you can easily encrypt your files with a password and recover them when needed. When done using it, you can lock them back up! Jock is available for Windows and Linux and can be built from source for macOS. Find the Jock repository <a href="https://github.com/skubed0007/jock">here</a>.
     </p>
     <p class="credits">
-        Oxumlabs was co-founded by Jaytirth Kundan (<a href="https://github.com/skubed0007">Find on Git Here</a>) and Bilal KanjelKheir (<a href="https://github.com/bilal-algorithms">Find on Git Here</a>)
-        with amazing team members like <Strong>Buj</Strong> (<a href="https://github.com/5GameMaker">Git Repo Here!</a>) and <Strong>Eliekheil</Strong> (<a href="https://github.com/eliekh05/">Git Repo Here!</a>)
+        OxumLabs was co-founded by Jaytirth Kundan (<a href="https://github.com/skubed0007">GitHub Profile</a>) and Bilal KanjelKheir (<a href="https://github.com/bilal-algorithms">GitHub Profile</a>), with amazing team members like <strong>Buj</strong> (<a href="https://github.com/5GameMaker">GitHub Profile</a>) and <strong>Eliekheil</strong> (<a href="https://github.com/eliekh05/">GitHub Profile</a>).
     </p>
+
+    <!-- JavaScript for theme toggling -->
+    <script>
+        // On page load, check and apply saved theme preference
+        window.onload = () => {
+            const preferredTheme = localStorage.getItem('theme') || 'light';
+            if (preferredTheme === 'dark') {
+                document.getElementById('theme-stylesheet').setAttribute('href', 'dark.css');
+                document.getElementById('toggle-theme').textContent = 'Switch to Light Mode';
+                document.getElementById('toggle-theme').style.backgroundColor = '#f0f0f0';
+                document.getElementById('toggle-theme').style.color = '#333';
+            }
+        };
+
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+            const themeButton = document.getElementById('toggle-theme');
+
+            if (themeStylesheet.getAttribute('href') === 'white.css') {
+                themeStylesheet.setAttribute('href', 'dark.css');
+                themeButton.textContent = 'Switch to Light Mode';
+                themeButton.style.backgroundColor = '#f0f0f0';
+                themeButton.style.color = '#333';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeStylesheet.setAttribute('href', 'white.css');
+                themeButton.textContent = 'Switch to Dark Mode';
+                themeButton.style.backgroundColor = '#333';
+                themeButton.style.color = '#fff';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+    </script>
 </body>
 </html>
