@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'CC';
+    src: url('fonts/CC.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'CC', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.title {
+    font-size: 3rem;
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff6f61, #f8c471);
+    padding: 0.5em;
+    border-radius: 0.3em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    text-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.6);
+}
+
+.title:hover {
+    transform: scale(1.08);
+    background: linear-gradient(45deg, #f8c471, #ff6f61);
+    box-shadow: 0 12px 25px rgba(255, 105, 97, 0.6);
+}
+
+.content-block,
+.project-section {
+    width: 85%;
+    max-width: 90em;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2em;
+    border-radius: 1.4em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.content-block:hover,
+.project-section:hover {
+    transform: translateY(-0.3em);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.content-head,
+.project-head {
+    font-size: 1.9rem;
+    color: #ff6f61;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 1em;
+    border-bottom: 3px solid #ff6f61;
+    padding-bottom: 0.7em;
+}
+
+.content-description,
+.project-description {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.3em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+    line-height: 1.6;
+    word-wrap: break-word;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.content-description:hover,
+.project-description:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.03);
+}
+
+.project-link {
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff6f61, #f8c471);
+    padding: 0.7em 1.5em;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    display: inline-block;
+    text-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.4);
+    margin-top: 1.3em;
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #f8c471, #ff6f61);
+    box-shadow: 0 6px 20px rgba(255, 105, 97, 0.6);
+}
+
+.midtext {
+    width: 70%;
+    font-family: 'CC';
+    font-size: 1.8rem;
+    color: rgba(255, 174, 0, 0.5);
+    margin: 2.5em 0;
+    text-align: center;
+    line-height: 1.6;
+    text-shadow: 0 0.4em 0.6em rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2.6rem;
+        padding: 0.8em 1.6em;
+    }
+
+    .content-block, .project-section {
+        padding: 2em 2.3em;
+    }
+
+    .content-head, .project-head {
+        font-size: 1.7rem;
+    }
+
+    .content-description, .project-description {
+        font-size: 1.1rem;
+    }
+
+    .project-link {
+        font-size: 1.1rem;
+    }
+
+    .midtext {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 2em 1em;
+    }
+
+    .title {
+        font-size: 2.3rem;
+        padding: 0.7em 1.4em;
+    }
+
+    .content-block, .project-section {
+        padding: 1.8em 2em;
+    }
+
+    .content-head, .project-head {
+        font-size: 1.6rem;
+    }
+
+    .content-description, .project-description {
+        font-size: 1rem;
+    }
+
+    .project-link {
+        font-size: 1rem;
+    }
+
+    .midtext {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1.5em 0.5em;
+    }
+
+    .title {
+        font-size: 2rem;
+        padding: 0.6em 1.2em;
+    }
+
+    .content-block, .project-section {
+        padding: 1.5em;
+    }
+
+    .content-head, .project-head {
+        font-size: 1.4rem;
+    }
+
+    .content-description, .project-description {
+        font-size: 0.95rem;
+    }
+
+    .project-link {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+    }
+
+    .midtext {
+        font-size: 1.5rem;
+    }
+}

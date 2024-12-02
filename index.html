@@ -4,84 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OxumLabs</title>
-    <!-- Initial link to white (light mode) stylesheet -->
-    <link id="theme-stylesheet" rel="stylesheet" href="dark.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Toggle Button for Light/Dark Mode -->
-    <button id="toggle-theme" onclick="toggleTheme()" style="
-        position: absolute;
-        top: 1em;
-        right: 1em;
-        padding: 0.5em 1em;
-        font-size: 1em;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-        background-color: #333;
-        color: #fff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    ">Switch to Dark Mode</button>
+    <h1 class="title">OxumLabs</h1>
+    <div class="content-block">
+        <h2 class="content-head">About Us</h2>
+        <p class="content-description">
+            Welcome to <strong>OxumLabs</strong>, where passion meets innovation. We are the visionaries behind <em>Neit</em>—a transformative programming language 
+            designed to make coding simple, accessible, and joyful. At its heart, <em>Neit</em> is a tool to educate and empower, but our ambition doesn’t stop there. 
+            We dream of a world where <em>Neit</em> serves as a gateway to solving real-world challenges and creating technology that drives progress.
+        </p>
+        <p class="content-description">
+            At <strong>OxumLabs</strong>, we don’t just build software—we craft experiences. Every product we create is born from our unwavering commitment 
+            to accessibility, creativity, and inclusivity. We firmly believe that software should be more than just free; it should be liberating. No hidden fees, 
+            no locked features—just tools designed with love, precision, and the goal of empowering creators everywhere.
+        </p>
+        <p class="content-description">
+            What truly sets <strong>OxumLabs</strong> apart is our guiding philosophy: <em>listen, create, innovate.</em> Your voices fuel our journey. 
+            We take every suggestion, idea, and piece of feedback as an opportunity to grow and improve. Our mission is to ensure that everyone, regardless of 
+            their background or expertise, has access to the tools they need to dream, create, and thrive.
+        </p>
+        <p class="content-description">
+            Our mission is perfectly encapsulated in our redefined motto:
+            <br>
+            <strong><i>"At OxumLabs, we believe in a world where every voice is heard and everyone finds something of value. We strive to create something for everyone, ensuring no one is left behind in the journey of innovation and creativity"</i></strong>
+        </p>
+        <p class="content-description">
+            Guided by this philosophy, we strive to build a thriving community of learners, creators, and innovators. Whether you're an experienced developer 
+            or just starting out, <strong>OxumLabs</strong> is here to provide the support, tools, and inspiration you need to transform your ideas into reality. 
+            Together, we can bridge gaps, break barriers, and create a future where technology empowers everyone.
+        </p>
 
-    <h1 class="topclass">OxumLabs</h1>
-    <p class="description">
-        <strong>Welcome to OxumLabs, where innovation meets inspiration!</strong><br>
-        At OxumLabs, we proudly present the revolutionary Native Execution and Instruction Text (Neit) programming language, alongside our groundbreaking Virtual Execution Node (Ven) Intermediate Representation (IR) Language. Our mission? To unlock a universe of possibilities within the realm of programming languages! But that’s just the beginning—our passionate team of visionaries is tirelessly brainstorming and nurturing brilliant ideas for our vibrant community.
-        <br><br>
-        Here, we don’t just dream of the future; we actively bring it to life! Join us on this exhilarating journey as we transform visionary concepts into reality, empowering you with the tools needed to shape your own destiny.
-    </p>
-    <p class="description">
-        <strong>The Native Execution and Instruction Text (Neit) Programming Language</strong><br>
-        Neit is not just another programming language; it's a revolutionary approach to coding! Experience the simplicity and elegance of coding in a language that rivals the ease of Python, all while minimizing overhead. Imagine crafting code in a syntax that feels natural and intuitive—one that allows you to focus on your creativity rather than getting bogged down in complex syntax.<br>
-        <br>
-        Want to code in your own unique syntax or even in plain English? Neit has your back! With its user-friendly design, Neit empowers you to bring your innovative ideas to life with minimal effort. Are you ready to embark on your coding adventure? Discover more about Neit <a href="https://OxumLabs.github.io/nsite">here!</a>
-    </p>
-    <p class="description">
-        <strong>Virtual Execution Node Intermediate Language (VenIR)</strong><br>
-        Introducing Ven, an innovative compiler infrastructure designed to empower you to create your own compilers! Ven stands out by producing exceptionally fast and lightweight binaries for the three major platforms: MacOS, Linux, and Windows. What sets Ven apart is its intelligent conversion of IR code into tokens, followed by extremely aggressive code elimination techniques—not limited to just dead code. Ven's primary goal is to strip down code as much as possible, ensuring that only the essential elements remain. This meticulous process results in minimal and highly efficient binaries that perform at peak speed, enhancing your development experience.<br>
-        You can read more about Ven on its GitHub repo <a href="https://github.com/oxumlabs/ven">here!</a>.
-    </p>
-    <p class="description">
-        <strong>Jock</strong><br>
-        Jock is a file encryption software <strong>NOT DESIGNED FOR PROFESSIONAL USE (YET)</strong> using which, you can easily encrypt your files with a password and recover them when needed. When done using it, you can lock them back up! Jock is available for Windows and Linux and can be built from source for macOS. Find the Jock repository <a href="https://github.com/skubed0007/jock">here</a>.
-    </p>
-    <p class="credits">
-        OxumLabs was co-founded by Jaytirth Kundan (<a href="https://github.com/skubed0007">GitHub Profile</a>) and Bilal KanjelKheir (<a href="https://github.com/bilal-algorithms">GitHub Profile</a>), with amazing team members like <strong>Buj</strong> (<a href="https://github.com/5GameMaker">GitHub Profile</a>) and <strong>Eliekheil</strong> (<a href="https://github.com/eliekh05/">GitHub Profile</a>).
-    </p>
+        <h2 class="content-head">Who Are We?</h2>
+        <p class="content-description">
+            You may be wondering, "Who are the people behind OxumLabs?" Meet our dedicated team of dreamers and doers:
+            <br>
+            <strong><i>
+                Joy (Jay Tirth Kundan):<br>
+                Co-Founder of OxumLabs and the mastermind behind the Neit programming language. As the core programmer, Joy ensures Neit remains 
+                innovative, efficient, and user-friendly. From writing complex code to constantly refining ideas, Joy’s passion is the backbone of OxumLabs.
+                <br><br>
+                Bilal KanjelKheir:<br>
+                Co-Founder and the driving force behind the brainstorming of our projects. Bilal is a visionary thinker, always pushing boundaries 
+                and exploring new possibilities. From ideation to execution, Bilal ensures OxumLabs stays ahead of the curve.
+                <br><br>
+                Buj:<br>
+                Lead Manager and Project Coordinator at OxumLabs. Buj is the glue that holds our projects together, providing direction and focus. 
+                As the primary manager of Neit, Buj ensures we stay aligned with our goals and maintain momentum.
+                <br><br>
+                Elie Khalil:<br>
+                Lead Program Tester and MacOS Port Developer. Elie is our problem-solver and backup wizard, ensuring our projects are robust and reliable. 
+                With a sharp eye for detail and a knack for troubleshooting, Elie keeps us on track and supports Joy when things get messy (and yes, Joy 
+                admits it happens often!).
+            </i></strong>
+        </p>
+        <p class="content-description">
+            Together, this team embodies the spirit of OxumLabs: passion, innovation, and a commitment to making technology accessible for everyone.
+        </p>
 
-    <!-- JavaScript for theme toggling -->
-    <script>
-        // On page load, check and apply saved theme preference
-        window.onload = () => {
-            const preferredTheme = localStorage.getItem('theme') || 'light';
-            if (preferredTheme === 'dark') {
-                document.getElementById('theme-stylesheet').setAttribute('href', 'dark.css');
-                document.getElementById('toggle-theme').textContent = 'Switch to Light Mode';
-                document.getElementById('toggle-theme').style.backgroundColor = '#f0f0f0';
-                document.getElementById('toggle-theme').style.color = '#333';
-            }
-        };
-
-        // Function to toggle between light and dark themes
-        function toggleTheme() {
-            const themeStylesheet = document.getElementById('theme-stylesheet');
-            const themeButton = document.getElementById('toggle-theme');
-
-            if (themeStylesheet.getAttribute('href') === 'white.css') {
-                themeStylesheet.setAttribute('href', 'dark.css');
-                themeButton.textContent = 'Switch to Light Mode';
-                themeButton.style.backgroundColor = '#f0f0f0';
-                themeButton.style.color = '#333';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeStylesheet.setAttribute('href', 'white.css');
-                themeButton.textContent = 'Switch to Dark Mode';
-                themeButton.style.backgroundColor = '#333';
-                themeButton.style.color = '#fff';
-                localStorage.setItem('theme', 'light');
-            }
-        }
-    </script>
+    </div>
+    <p class="midtext" style="text-decoration: none;">Here we show you our projects , Don't forget to let us know what you want more to see! WE ARE ALL OPEN!</p>
+    <div class="project-section">
+        <h2 class="project-head">Neit Programming Language</h2>
+        <p class="project-description">
+            Neit ~ A innovative new compiled + interpreted programming language aimed at making learning to code far far easier for anyone without
+            getting into head scratching concepts! Neit keeps things simple and compact, but powerful when needed! Neit has a magic power - it can change its syntax as per user rules!<br> Have a look into Neit at its home <a class="project-link" href="https://oxumlabs.github.io/nsite">here</a>
+        </p>
+    </div>
 </body>
 </html>
