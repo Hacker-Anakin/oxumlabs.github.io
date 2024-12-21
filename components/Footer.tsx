@@ -47,12 +47,6 @@ const Footer = () => {
             <p className="text-sm">
               Email: <a href="mailto:oxumlabs@proton.me" className="hover:text-white">oxumlabs@proton.me</a>
             </p>
-            <p className="text-sm">
-              Phone: <a href="tel:+1234567890" className="hover:text-white">+1 (234) 567-890</a>
-            </p>
-            <p className="text-sm mb-4">
-              Address: 123 Main Street, City, Country
-            </p>
 
             <div className="flex space-x-4">
               <Link href="https://github.com/OxumLabs/neit" aria-label="Github" className="hover:text-white">

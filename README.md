@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OxumLabs
 
-## Getting Started
+![alt text](/app/main.png)
 
-First, run the development server:
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Mission](#mission)
+- [Features](#features)
+- [Meet the Team](#meet-the-team)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+Welcome to OxumLabs, where passion meets innovation. At OxumLabs, we are the visionaries behind **NEiT**, a transformative programming language that makes coding simple, accessible, and joyful. Our mission is to educate and empower through innovative tools that solve real-world challenges and drive progress.
+
+## Mission
+
+At OxumLabs, we believe in creating experiences that are accessible, inclusive, and empowering. Guided by our philosophy—**Listen, Create, Innovate**—we strive to ensure everyone, regardless of their background, has the tools to dream, create, and thrive.
+
+Our motto:
+*"At OxumLabs, we believe in a world where every voice is heard and everyone finds something of value. We strive to create something for everyone, ensuring no one is left behind in the journey of innovation and creativity."*
+
+## Features
+
+- **NEiT Programming Language**:  
+  NEiT is a compiled + interpreted language designed for simplicity and power. Features include:
+  - Syntax customization through user-defined rules
+  - Compact yet powerful functionalities
+  - Aimed at making coding approachable for beginners
+
+- **Community-Focused Development**:  
+  We prioritize user feedback and suggestions to shape our tools and projects.
+
+- **Innovative Tools**:  
+  Every product at OxumLabs is designed with precision, aiming to be free, liberating, and creator-focused.
+
+## Meet the Team
+
+- **Joy (Jay Tirth Kundan)**: Co-Founder and creator of NEiT. Joy is the core programmer, constantly innovating and refining the NEiT language.  
+- **Bilal KanjelKheir**: Co-Founder and visionary thinker, pushing boundaries and shaping the future of OxumLabs projects.  
+- **Buj**: Lead Manager and Project Coordinator, ensuring focus and alignment in all OxumLabs endeavors.  
+- **Elie Khalil**: Lead Program Tester and MacOS Port Developer, dedicated to ensuring quality and robustness in every release.
+
+## Installation
+
+To set up the website locally, follow these steps:
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/Hacker-Anakin/OxumLabs.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd OxumLabs
+    ```
+
+3. **Install the dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+To start the development server, run:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view and explore OxumLabs.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+We welcome contributions to improve OxumLabs. To contribute:
 
-## Learn More
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For any questions, suggestions, or feedback, please contact us at [cakely63@gmail.com](mailto:cakely63@gmail.com).
